@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="cs">
+@@include('../partials/head/head.html', {
+"pageTitle": "Košík"
+})
+    <body>
+        <div class="wrapper">
+          @@include('../partials/header.html')
+                <main class="main-page-content cart-page">
+                <div class="cart-progress-wrap">
+                    <ol class="cart-progress">
+                        <li class="active">Košík</li>
+                        <li>Doprava a platba</li>
+                        <li>Fakturační údaje</li>
+                    </ol>
+                </div>
+                <div class="container">
+                    <h1 class="cart-title">Tohle zboží bude ozdobou vaší dílny!</h1>
+                    <div class="cart-items-wrap">
+                        <table class="cart-items">
+                            <thead>
+                                <tr>
+                                    <th class="col-image"></th>
+                                    <th class="col-product">Produkt</th>
+                                    <th class="col-piece">Cena za 1 ks</th>
+                                    <th class="col-quantity">Množství</th>
+                                    <th class="col-price">Cena celkem</th>
+                                    <th class="col-delete"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-image"><img src="images/cart-item.png" alt=""></td>
+                                    <td class="col-product">Ryoba Seiun saku 300</td>
+                                    <td class="col-piece">1 060 Kč<span class="d-inline d-sm-inline d-md-none"> / ks</span></td>
+                                    <td class="col-quantity">
+                                        <div class="quantity-wrap">
+                                            <button class="btn-count btn-minus"></button>
+                                            <input type="text" value="1" class="amount">
+                                            <button class="btn-count btn-plus"></button>
+                                        </div>
+                                    </td>
+                                    <td class="col-price"><span class="d-block d-sm-block d-md-none">Celkem</span><span class="price-value">1 060 Kč</span></td>
+                                    <td class="col-delete"><div class="btn-delete-wrap"><button class="btn-delete"></button></div></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-image"><img src="images/cart-item-2.png" alt=""></td>
+                                    <td class="col-product">Fugaku Sentei 300</td>
+                                    <td class="col-piece">1 010 Kč<span class="d-inline d-sm-inline d-md-none"> / ks</span></td>
+                                    <td class="col-quantity">
+                                        <div class="quantity-wrap">
+                                            <button class="btn-count btn-minus"></button>
+                                            <input type="text" value="2" class="amount">
+                                            <button class="btn-count btn-plus"></button>
+                                        </div>
+                                    </td>
+                                    <td class="col-price"><span class="d-block d-sm-block d-md-none">Celkem</span><span class="price-value">2 020 Kč</span></td>
+                                    <td class="col-delete"><div class="btn-delete-wrap"><button class="btn-delete"></button></div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="cart-items-bottom">
+                            <div class="sale-code">
+                                <a href="" class="sale-code-link angle angle-down">Uplatnit slevový kód</a>
+                                <div class="sale-code-inputs">
+                                    <input type="text" placeholder="Zadejte slevový kód...">
+                                    <button class="btn-green btn-round">Ověřit</button>
+                                </div>
+                            </div>
+                            <div class="price-sum">
+                                <span class="price-sum-title">Celková cena objednávky</span>
+                                <span class="price-sum-amount">3 080 Kč</span>
+                            </div>
+                        </div>
+
+                        <div class="cart-items-step">
+                            <button class="btn-yellow btn-round">Pokračovat v objednávce</button>
+                        </div>
+                    </div>
+                </div>
+
+            </main>
+          @@include('../partials/footer.html')
+        </div>
+
+        @@include('../partials/scripts/common.html')
+    </body>
+</html>

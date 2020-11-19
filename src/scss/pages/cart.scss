@@ -1,0 +1,701 @@
+$color_black: rgba(5,18,28,1);
+
+/**** CART GENERAL ****/
+
+.angle {
+  position: relative;
+  &::after {
+    content: " ";
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    right: -15px;
+    top: 7px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  &.angle-down::after {
+    background-image: url("../images/icons/angle-down.svg");
+  }
+  &.angle-up::after {
+    background-image: url("../images/icons/angle-up.svg");
+  }
+}
+
+.cart-page {
+  .summary {
+    padding: 20px;
+    background: #F4F6F9;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    max-width: 370px;
+    font-size: 16px;
+    margin-bottom: 30px;
+    @media #{$m-sm_xs} {
+      margin: 0 auto 30px;
+    }
+    .summary-heading {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .summary-table {
+      width: 100%;
+      tr {
+        td {
+          padding: 15px 0;
+          &.price {
+            text-align: right;
+            font-weight: 700;
+          }
+        }
+      }
+      .summary-items,
+      .summary-transport-pay{
+        tr {
+          border-bottom: 1px solid #E7E9EC;
+          &:last-child {
+            border-bottom: 4px solid #E7E9EC;
+          }
+          .quantity {
+            font-weight: 400;
+          }
+          .product {
+            font-weight: 600;
+          }
+        }
+      }
+      .summary-sum {
+        font-weight: 700;
+        td {
+          padding-bottom: 0;
+        }
+        .price {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .cart-items-step {
+    text-align: right;
+    @media #{$m-xs} {
+      text-align: center;
+    }
+    .back-link {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      color: #4F5A67;
+      @media #{$m-sm_xs} {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .two-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media #{$m-sm_xs}  {
+      flex-direction: column;
+    }
+  }
+
+  // BUTTONS
+  .btn-round {
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border-color: transparent;
+  }
+  .btn-green {
+    background: #2E390E;
+    padding: 8px 16px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+  }
+  .btn-yellow {
+    background: #FFC700;
+    color: $color_black;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 16px 28px;
+  }
+}
+
+/******CART 1ST STEP *****/
+
+.cart-progress-wrap {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  .cart-progress {
+    display: flex;
+    li {
+      flex: 1;
+      margin: 0 15px;
+      text-align: center;
+      justify-content: center;
+      border-bottom: 1px solid #E7E9EC;
+      color: #4F5A67;
+      padding-bottom: 12px;
+      font-size: 16px;
+      line-height: 24px;
+      @media #{$m-xs} {
+        margin: 0;
+        font-size: 12px;
+        line-height: 18px;
+      }
+      &.active{
+        border-bottom-color: #2E390E;
+        color: #2E390E;
+        font-weight: 700;
+      }
+    }
+
+  }
+}
+
+.cart-title {
+  font-size: 26px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 700;
+  max-width: 740px;
+  margin: 0 auto 30px;
+  @media #{$m-xs} {
+    font-size: 22px;
+    line-height: 32px;
+  }
+}
+
+.cart-items-wrap {
+  margin: 20px 0;
+  .cart-items {
+    width: 100%;
+    margin-bottom: 20px;
+    thead {
+      color: $color_black;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 600;
+      @media #{$m-xs} {
+        display: none;
+      }
+      tr {
+        th {
+          padding: 15px;
+        }
+      }
+    }
+    tbody {
+      border: 1px solid transparent;
+      -webkit-border-radius: 7px;
+      -moz-border-radius: 7px;
+      border-radius: 7px;
+      box-shadow: 0 0 0 1px #E7E9EC;
+      @media #{$m-xs} {
+        box-shadow: none;
+        display: block;
+        > tr td{
+          border-top: 1px solid #E7E9EC;
+        }
+      }
+      tr {
+        @media #{$m-xs} {
+          display: block;
+          width: 100%;
+          float: left;
+          border-top: 1px solid #E7E9EC;
+          border-bottom: 1px solid #E7E9EC;
+          padding: 10px 0 15px;
+          position: relative;
+          &:last-child {
+            border-top: 0;
+          }
+        }
+        td {
+          padding: 15px;
+          border-bottom: 1px solid #E7E9EC;
+          @media #{$m-xs} {
+            display: block;
+            float: left;
+            border: 0;
+            padding: 5px 10px;
+          }
+        }
+        &:last-child {
+          td {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+    tfoot {
+      tr {
+        td {
+          padding: 15px;
+          &.col-sum-price {
+            text-align: right;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            .col-sum-price-value {
+              font-weight: 700;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+    .quantity-wrap {
+      display: flex;
+      justify-content: center;
+      .btn-count {
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        border: 1px solid #E7E9EC;
+        background-repeat: no-repeat;
+        background-position: center center;
+        &.btn-minus {
+          background-image: url("../images/icons/btn-minus.svg");
+          border-radius: 5px 0 0 5px;
+        }
+        &.btn-plus {
+          background-image: url("../images/icons/btn-plus.svg");
+          border-radius: 0 5px 5px 0;
+        }
+      }
+      .amount {
+        width: 40px;
+        height: 40px;
+        border: 1px solid #E7E9EC;
+        text-align: center;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+      }
+    }
+
+    .btn-delete-wrap {
+      display: flex;
+      justify-content: center;
+      .btn-delete {
+        width: 20px;
+        height: 20px;
+        background: url("../images/icons/btn-close.svg") no-repeat center center;
+        border: 0;
+      }
+    }
+
+    .col-image {
+      width: 100px;
+      padding-right: 0;
+      @media #{$m-xs} {
+        padding: 0 0 25px 0;
+        width: 20%;
+      }
+    }
+    td.col-product {
+      font-weight: 700;
+      @media #{$m-xs} {
+        width: 70%;
+        padding-bottom: 2px;
+      }
+    }
+    .col-piece {
+      text-align: right;
+      white-space: nowrap;
+      @media #{$m-xs} {
+        width: 80%;
+        text-align: left;
+        padding-top: 0;
+      }
+    }
+    .col-quantity {
+      text-align: center;
+    }
+    .col-price {
+      text-align: right;
+      white-space: nowrap;
+      .price-value {
+        font-weight: 600;
+      }
+      @media #{$m-xs} {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        .price-value {
+          font-weight: 700;
+        }
+      }
+    }
+    .col-delete {
+      text-align: center;
+      @media #{$m-xs} {
+        position: absolute;
+        right: 0;
+        top: 20px;
+        z-index: 1;
+      }
+    }
+  }
+
+  .cart-items-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    @media #{$m-xs} {
+      display: block;
+      text-align: center;
+    }
+    .sale-code {
+      .sale-code-link {
+        color: #2E390E;
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 600;
+        display: inline-block;
+        margin-bottom: 10px;
+        position: relative;
+      }
+      .sale-code-inputs {
+        display: flex;
+        @media #{$m-xs} {
+          display: block;
+          margin-bottom: 30px;
+        }
+        input {
+          padding: 10px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+          border: 1px solid #BCBEC1;
+          font-weight: 400;
+          font-size: 14px;
+          margin-right: 12px;
+        }
+      }
+    }
+    .price-sum {
+      text-align: right;
+      @media #{$m-xs} {
+        text-align: center;
+      }
+      .price-sum-title {
+        display: block;
+        font-size: 14px;
+        line-height: 22px;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+      .price-sum-amount {
+        display: block;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 36px;
+        color: $color_black;
+      }
+    }
+  }
+}
+
+
+/*************** TRANSPORT AND PAYMENT ]2ND STEP] ***********/
+
+
+.cart-progress-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 20px;
+  @media #{$m-xs} {
+    font-size: 20px;
+  }
+}
+
+.cart-progress-section {
+  margin-bottom: 30px;
+  .note,
+  .small-option{
+    font-size: 14px;
+    line-height: 24px;
+    a {
+      font-weight: 700;
+      color: inherit;
+    }
+  }
+}
+
+.transport-payment {
+  margin-top: 30px;
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 25px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #E7E9EC;
+    margin-bottom: 12px;
+    cursor: pointer;
+    @media #{$m-xs} {
+      display: block;
+    }
+    &.active {
+      border-color: #70715F;
+    }
+    .option-first-half {
+      display: flex;
+      align-items: center;
+      @media #{$m-xs} {
+        align-items: initial;
+      }
+    }
+    .check {
+      margin-right: 15px;
+      @media #{$m-xs} {
+        margin-top: 10px;
+        width: 15px;
+      }
+    }
+    .text {
+      .text-heading {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        .logo {
+          @media #{$m-xs} {
+            display: block;
+            margin-top: 10px;
+          }
+        }
+      }
+      .text-desc {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+      }
+      a {
+        color: inherit;
+      }
+    }
+    .price {
+      font-weight: 600;
+      @media #{$m-xs} {
+        margin-left: 30px;
+        margin-top: 10px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+/**** 3RD STEP ****/
+
+.form-group-custom {
+  margin-bottom: 20px;
+  label {
+    font-weight: 600;
+  }
+  .required {
+    color: #FFCC18;
+  }
+}
+
+.form-control-custom {
+  display: block;
+  border: 1px solid #BCBEC1;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-weight: 400;
+  width: 370px;
+  @media #{$m-sm_xs} {
+    width: 100%;
+  }
+}
+
+.checkboxes {
+  .label-wrap {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    a {
+      color: #2E390E;
+    }
+  }
+
+  /* Hide the browser's default checkbox */
+  .label-wrap input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid #BCBEC1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  /* On mouse-over, add a grey background color */
+
+  /* When the checkbox is checked, add a blue background */
+  .label-wrap input:checked ~ .checkmark {
+    background-color: #2E390E;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .label-wrap input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .label-wrap .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+}
+
+.summary-amount {
+  text-align: right;
+  margin-bottom: 25px;
+  @media #{$m-xs} {
+    text-align: center;
+  }
+  .summary-amount-heading {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+  .summary-amount-price {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+/**** THANK YOU PAGE ****/
+.thankyou-page {
+  text-align: center;
+  .thx-img {
+    margin-bottom: 20px;
+  }
+  .thankyou-title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 20px;
+    @media #{$m-xs} {
+      max-width: 500px;
+      margin: 0 auto 20px;
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
+  .intro-text {
+    max-width: 740px;
+    margin: 0 auto 40px;
+  }
+  .subtitle {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+  .bank-contacts {
+    @media #{$m-sm_xs} {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .heading {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      margin-bottom: 25px;
+    }
+    .item {
+      margin-bottom: 25px;
+      strong{
+        font-size: 14px;
+      }
+    }
+  }
+  .back-to-hp {
+    margin: 30px 0 80px;
+    font-weight: 700;
+    @media #{$m-xs} {
+      margin: 20px 0 40px;
+    }
+    a {
+      color: #2E390E;
+      letter-spacing: 1px;
+    }
+  }
+  .stars-wrap {
+    margin-top: 60px;
+    display: flex;
+    @media #{$m-xs} {
+      flex-flow: wrap;
+      margin-top: 0;
+    }
+    .stars-item {
+      flex: 1;
+      @media #{$m-xs} {
+        flex: auto;
+        width: 50%;
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      .heading {
+        color: #05121C;
+        font-weight: 700;
+        font-size: 26px;
+        @media #{$m-xs} {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

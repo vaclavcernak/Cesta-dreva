@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+@@include('../partials/head/head.html', {
+"pageTitle": "Můj účet - Detail objednávky"
+})
+<body>
+<div class="wrapper">
+  @@include('../partials/header.html')
+
+  <div class="container account-page">
+                <div class="row">
+                    <aside class="col-md-3">
+                        <h1 class="account-title">Můj účet</h1>
+                        <div class="account-menu-wrap">
+                            <nav class="account-menu">
+                                <ul>
+                                    <li><a href="">Nástěnka</a></li>
+                                    <li><a href="" class="active">Objednávky</a></li>
+                                    <li><a href="">Stažení</a></li>
+                                    <li><a href="">Adresy</a></li>
+                                    <li><a href="">Detaily účtu</a></li>
+                                    <li><a href="">DIČ</a></li>
+                                    <li><a href="">Odhlásit se</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </aside>
+                    <main class="col-md-9 account-main-content">
+                        <div class="dashboard">
+                            <section class="section last-order">
+                                <div class="last-order-heading">
+                                    <h2 class="section-title section-title-xs-big">Objednávka č. 20000392</h2>
+                                    <div class="order-date">Objednávka vytvořena 18.9.2020</div>
+                                </div>
+                                <div class="last-order-status">Tuto objednávku právě zpracováváme</div>
+                                <div class="order-options">
+                                    <a href="">Stáhnout fakturu</a>
+                                    <a href="">Zopakovat objednávku</a>
+                                </div>
+
+                                <div class="cart-items-wrap">
+                                    <table class="cart-items">
+                                        <thead>
+                                        <tr>
+                                            <th class="col-image"></th>
+                                            <th class="col-product"></th>
+                                            <th class="col-piece">Cena za 1&nbsp;ks</th>
+                                            <th class="col-quantity">Množství</th>
+                                            <th class="col-price">Cena celkem</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td class="col-image"><img src="images/cart-item.png" alt=""></td>
+                                            <td class="col-product">Ryoba Seiun saku 300</td>
+                                            <td class="col-piece">1 060 Kč<span class="d-inline d-sm-inline d-md-none"> / ks</span></td>
+                                            <td class="col-quantity">1ks</td>
+                                            <td class="col-price"><span class="d-block d-sm-block d-md-none">Celkem</span><span class="price-value">1 060 Kč</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="col-image"><img src="images/cart-item-2.png" alt=""></td>
+                                            <td class="col-product">Fugaku Sentei 300</td>
+                                            <td class="col-piece">1&nbsp;010&nbsp;Kč<span class="d-inline d-sm-inline d-md-none"> / ks</span></td>
+                                            <td class="col-quantity">1ks</td>
+                                            <td class="col-price"><span class="d-block d-sm-block d-md-none">Celkem</span><span class="price-value">2 020 Kč</span></td>
+                                        </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="5" class="col-sum-price"> Celkem <span class="col-sum-price-value">2 120 Kč</span></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </section>
+
+                            <section class="section transport-pay">
+                                <div class="row row-narrow">
+                                    <div class="col-md-6">
+                                        <h2 class="section-title section-title-smaller">Doprava</h2>
+                                        <div class="item">
+                                            <div class="item-name">Osobní odběr</div>
+                                            <div class="item-value">Zdarma</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h2 class="section-title section-title-smaller">Platba</h2>
+                                        <div class="item">
+                                            <div class="item-name">GLS kurýr</div>
+                                            <div class="item-value">160 Kč</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
+
+                            <section class="section billing-delivery-info">
+                                <div class="row row-narrow">
+                                    <div class="col-md-6">
+                                        <h2 class="section-title section-title-smaller">Fakturační údaje</h2>
+                                        <div class="billing-delivery-item">
+                                            <address class="address">
+                                                Karel Novák<br>
+                                                Novákova 14, 602 00 Brno<br>
+                                                karel.novak@seznam.cz<br>
+                                                +42077788899
+                                            </address>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2 class="section-title section-title-smaller">Dodací údaje</h2>
+                                        <div class="billing-delivery-item">
+                                            <address class="address">
+                                                Karel Novák<br>
+                                                Novákova 14, 602 00 Brno<br>
+                                                karel.novak@seznam.cz<br>
+                                                +42077788899
+                                            </address>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="section sum-price">
+                                <div class="price-sum">
+                                    <span class="price-sum-title">Celková cena objednávky</span>
+                                    <span class="price-sum-amount">3 080 Kč</span>
+                                </div>
+                            </section>
+                        </div>
+                    </main>
+                </div>
+            </div>
+
+  @@include('../partials/footer.html')
+</div>
+
+@@include('../partials/scripts/common.html')
+</body>
+</html>

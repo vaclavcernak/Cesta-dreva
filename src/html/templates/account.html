@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+@@include('../partials/head/head.html', {
+"pageTitle": "Můj účet"
+})
+<body>
+  <div class="wrapper">
+    @@include('../partials/header.html')
+
+            <div class="container account-page">
+                <div class="row">
+                    <aside class="col-md-3">
+                        <h1 class="account-title">Můj účet</h1>
+                        <div class="account-menu-wrap">
+                            <nav class="account-menu">
+                                <ul>
+                                    <li><a href="" class="active">Nástěnka</a></li>
+                                    <li><a href="">Objednávky</a></li>
+                                    <li><a href="">Stažení</a></li>
+                                    <li><a href="">Adresy</a></li>
+                                    <li><a href="">Detaily účtu</a></li>
+                                    <li><a href="">DIČ</a></li>
+                                    <li><a href="">Odhlásit se</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </aside>
+                    <main class="col-md-9 account-main-content">
+                        <div class="dashboard">
+                            <section class="section last-orders">
+                                <div class="last-orders-heading">
+                                    <h2 class="section-title">Poslední objednávky</h2>
+                                    <a href="" class="show-all-orders d-none d-sm-inline">Zobrazit všechny objednávky</a>
+                                </div>
+                                <div class="row row-narrow">
+                                    <div class="col-lg-6">
+                                        <div class="order-item">
+                                            <div class="order-title">Objednávka č. 20000392</div>
+                                            <div class="order-status">Tuto objednávku právě zpracováváme</div>
+                                            <div class="order-items">
+                                                <img src="images/cart-item.png" alt="">
+                                                <img src="images/cart-item-2.png" alt="">
+                                            </div>
+                                            <div class="order-bottom">
+                                                <div class="order-price">3 240 Kč</div>
+                                                <div class="order-detail-link"><a href="">Zobrazit detaily</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-6">
+                                        <div class="order-item">
+                                            <div class="order-title">Objednávka č. 20000392</div>
+                                            <div class="order-status sent">Objednávka odeslána</div>
+                                            <div class="order-items">
+                                                <img src="images/cart-item.png" alt="">
+                                                <img src="images/cart-item-2.png" alt="">
+                                                <img src="images/cart-item.png" alt="">
+                                                <img src="images/cart-item.png" alt="">
+                                            </div>
+                                            <div class="order-bottom">
+                                                <div class="order-price">3 240 Kč</div>
+                                                <div class="order-detail-link"><a href="">Zobrazit detaily</a></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="section billing-delivery-info">
+                                <div class="row row-narrow">
+                                    <div class="col-md-6">
+                                        <h2 class="section-title">Fakturační údaje</h2>
+                                        <div class="billing-delivery-item">
+                                            <address class="address">
+                                                Karel Novák<br>
+                                                Novákova 14, 602 00 Brno<br>
+                                                karel.novak@seznam.cz<br>
+                                                +42077788899
+                                            </address>
+                                            <div class="bottom-link">
+                                                <a href="">Upravit</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <h2 class="section-title">Dodací údaje</h2>
+                                        <div class="billing-delivery-item">
+                                            <address class="address">
+                                                Karel Novák<br>
+                                                Novákova 14, 602 00 Brno<br>
+                                                karel.novak@seznam.cz<br>
+                                                +42077788899
+                                            </address>
+                                            <div class="bottom-link">
+                                                <a href="">Upravit</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </section>
+                        </div>
+                    </main>
+                </div>
+            </div>
+
+    @@include('../partials/footer.html')
+  </div>
+
+  @@include('../partials/scripts/common.html')
+</body>
+</html>

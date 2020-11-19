@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="cs">
+@@include('../partials/head/head.html', {
+"pageTitle": "Košík - Doprava a platba"
+})
+    <body>
+        <div class="wrapper">
+          @@include('../partials/header.html')
+            <main class="main-page-content cart-page">
+                <div class="cart-progress-wrap">
+                    <ol class="cart-progress">
+                        <li>Košík</li>
+                        <li class="active">Doprava a platba</li>
+                        <li>Fakturační údaje</li>
+                    </ol>
+                </div>
+                <div class="container transport-payment-wrap">
+                    <h1 class="cart-title">Od nákupu kvalitního vybavení do vaší dílny vás dělí už jen doprava a zaplacení!</h1>
+                    <div class="row transport-payment">
+                        <div class="col-lg-7">
+                            <div class="cart-progress-section transport">
+                                <h2 class="cart-progress-title">Doprava</h2>
+
+                                <div class="option active">
+                                    <div class="option-first-half">
+                                        <div class="check">
+                                            <input type="radio" name="transport" checked>
+                                        </div>
+                                        <div class="text">
+                                            <div class="text-heading">Osobní odběr</div>
+                                            <div class="text-desc">Vyzvedněte si zboží v naší prodejně v Lhůtě (<a href="">mapa</a>)</div>
+                                        </div>
+                                    </div>
+                                    <div class="price">Zdarma</div>
+                                </div>
+                                <div class="option">
+                                    <div class="option-first-half">
+                                        <div class="check">
+                                            <input type="radio" name="transport">
+                                        </div>
+                                        <div class="text">
+                                            <div class="text-heading">GLS kurýr</div>
+                                            <div class="text-desc">Doručení do 2-3 pracovních dní</div>
+                                        </div>
+                                    </div>
+                                    <div class="price">160 Kč</div>
+                                </div>
+                            </div>
+
+                            <div class="cart-progress-section payment">
+                                <h2 class="cart-progress-title">Platba</h2>
+
+                                <div class="option">
+                                    <div class="option-first-half">
+                                        <div class="check">
+                                            <input type="radio" name="payment">
+                                        </div>
+                                        <div class="text">
+                                            <div class="text-heading">Platební brána <img class="logo" src="../../www/assets/img/logo-comgate.png" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="price">Zdarma</div>
+                                </div>
+
+                                <div class="option active">
+                                    <div class="option-first-half">
+                                        <div class="check">
+                                            <input type="radio" name="payment" checked>
+                                        </div>
+                                        <div class="text">
+                                            <div class="text-heading">Platba kartou <img class="logo" src="../../www/assets/img/logo-visa.png" alt=""></div>
+                                        </div>
+                                    </div>
+                                    <div class="price">Zdarma</div>
+                                </div>
+
+                                <div class="option">
+                                    <div class="option-first-half">
+                                        <div class="check">
+                                            <input type="radio" name="payment">
+                                        </div>
+                                        <div class="text">
+                                            <div class="text-heading">Bankovní převod</div>
+                                        </div>
+                                    </div>
+                                    <div class="price">Zdarma</div>
+                                </div>
+
+                                <div class="option">
+                                    <div class="option-first-half">
+                                        <div class="check">
+                                            <input type="radio" name="payment">
+                                        </div>
+                                        <div class="text">
+                                            <div class="text-heading">Dobírka</div>
+                                        </div>
+                                    </div>
+                                    <div class="price">30 Kš</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5">
+                            <div class="summary">
+                                <h3 class="summary-heading">Souhrn objednávky</h3>
+                                <table class="summary-table">
+                                    <tbody class="summary-items">
+                                        <tr>
+                                            <td><span class="quantity">1ks</span> <span class="product">Ryoba Seiun saku 300</span></td>
+                                            <td class="price">1 060 Kč</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="quantity">2ks</span> <span class="product">Fugaku Sengei 300</span></td>
+                                            <td class="price">2 020 Kč</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="summary-transport-pay">
+                                        <tr>
+                                            <td>Doprava - GLS kurýr</td>
+                                            <td class="price">150 Kč</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Platba - převodem</td>
+                                            <td class="price">Zdarma</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot class="summary-sum">
+                                        <tr>
+                                            <td>Celková cena objednávky</td>
+                                            <td class="price">3 240 Kč</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="cart-items-step two-steps">
+                                <a class="back-link" href="">Zpět do košíku</a>
+                                <button class="btn-yellow btn-round">Pokračovat v objednávce</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+          @@include('../partials/footer.html')
+        </div>
+
+        @@include('../partials/scripts/common.html')
+    </body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="cs">
+@@include('../partials/head/head.html', {
+"pageTitle": "Košík - Fakturační údaje"
+})
+    <body>
+        <div class="wrapper">
+          @@include('../partials/header.html')
+            <main class="main-page-content cart-page">
+                <div class="cart-progress-wrap">
+                    <ol class="cart-progress">
+                        <li>Košík</li>
+                        <li>Doprava a platba</li>
+                        <li class="active">Fakturační údaje</li>
+                    </ol>
+                </div>
+                <div class="container">
+                    <h1 class="cart-title">Řekněte nám, kde máte svojí dílničku. Vaše zboží se už nemůže dočkat. </h1>
+                    <div class="row transport-payment">
+                        <div class="col-lg-7 col-md-6">
+                            <div class="cart-progress-section">
+                                <h2 class="cart-progress-title">Kontaktní údaje</h2>
+                                <p class="note">Máte u nás už účet? <a href="">Přihlaste se</a></p>
+
+                                <div class="form-group-custom">
+                                    <label for="name">Jméno a příjmení <span class="required">*</span></label>
+                                    <input type="text" class="form-control-custom" id="name" required value="Karel">
+                                </div>
+
+                                <div class="form-group-custom">
+                                    <label for="email">E-mail <span class="required">*</span></label>
+                                    <input type="email" class="form-control-custom" id="email" required>
+                                </div>
+
+                                <div class="form-group-custom">
+                                    <label for="phone">Telefon <span class="required">*</span></label>
+                                    <input type="text" class="form-control-custom" id="phone" required>
+                                </div>
+                            </div>
+
+                            <div class="cart-progress-section">
+                                <h2 class="cart-progress-title">Fakturační údaje</h2>
+
+                                <div class="form-group-custom">
+                                    <label for="street">Ulice a č.p. <span class="required">*</span></label>
+                                    <input type="text" class="form-control-custom" id="street" required value="Karel">
+                                </div>
+
+                                <div class="form-group-custom">
+                                    <label for="city">Město <span class="required">*</span></label>
+                                    <input type="text" class="form-control-custom" id="city" required>
+                                </div>
+
+                                <div class="form-group-custom">
+                                    <label for="zip">Psč <span class="required">*</span></label>
+                                    <input type="text" class="form-control-custom" id="zip" required>
+                                </div>
+
+                                <p class="small-option"><a href="" class="angle angle-up">Chci nakoupit na firmu</a></p>
+
+                                <div class="form-group-custom">
+                                    <label for="firm">Název firmy <span class="required">*</span></label>
+                                    <input type="text" class="form-control-custom" id="firm" required>
+                                </div>
+
+                                <div class="form-group-custom">
+                                    <label for="ico">IČO</label>
+                                    <input type="text" class="form-control-custom" id="ico">
+                                </div>
+
+                                <div class="form-group-custom">
+                                    <label for="dic">DIČ</label>
+                                    <input type="text" class="form-control-custom" id="dic">
+                                </div>
+
+                                <p class="small-option"><a href="" class="angle angle-up">Poznámka pro obchod</a></p>
+
+                                <div class="form-group-custom">
+                                    <label for="message">Poznámka pro obchod</label>
+                                    <textarea type="text" class="form-control-custom" id="message" rows="5"></textarea>
+                                </div>
+
+                                <p class="small-option"><a href="" class="angle angle-down">Poznámka pro dopravce</a></p>
+                            </div>
+
+                            <div class="separator"></div>
+
+                            <div class="checkboxes">
+                                <label class="label-wrap">Vytvořte mi s nákupem i můj osobní účet
+                                    <input type="checkbox" checked="checked">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="label-wrap">Souhlasím se zasíláním novinek na můj e-mail
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <label class="label-wrap">Souhlasím s <a href="">ochranou osobních údajů</a> a <a href="">obchodními podmínkami</a>
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+
+                                <div class="separator"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-md-6">
+                            <div class="summary">
+                                <h3 class="summary-heading">Souhrn objednávky</h3>
+                                <table class="summary-table">
+                                    <tbody class="summary-items">
+                                        <tr>
+                                            <td><span class="quantity">1ks</span> <span class="product">Ryoba Seiun saku 300</span></td>
+                                            <td class="price">1 060 Kč</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span class="quantity">2ks</span> <span class="product">Fugaku Sengei 300</span></td>
+                                            <td class="price">2 020 Kč</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="summary-transport-pay">
+                                        <tr>
+                                            <td>Doprava - GLS kurýr</td>
+                                            <td class="price">150 Kč</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Platba - převodem</td>
+                                            <td class="price">Zdarma</td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot class="summary-sum">
+                                        <tr>
+                                            <td>Celková cena objednávky</td>
+                                            <td class="price">3 240 Kč</td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-7 col-md-6">
+                            <div class="summary-amount">
+                                <div class="summary-amount-heading">Celková cena objednávky</div>
+                                <div class="summary-amount-price">3 080 Kč</div>
+                            </div>
+                            <div class="cart-items-step two-steps">
+                                <a class="back-link" href="">Zpět na dopravu a platbu</a>
+                                <button class="btn-yellow btn-round">Odeslat objednávku</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+          @@include('../partials/footer.html')
+        </div>
+
+        @@include('../partials/scripts/common.html')
+    </body>
+</html>

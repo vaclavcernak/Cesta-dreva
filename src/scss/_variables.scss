@@ -1,0 +1,12 @@
+// Define media query properties
+$m-lg: "(min-width:1200px)";
+$m-md: "(min-width:992px) and (max-width:1199.5px)";
+$m-sm: "(min-width:768px) and (max-width:991.5px)";
+$m-xs: "(max-width:767.5px)";
+$m-xxs: "(max-width:575.5px)";
+$m-lg_md: "(min-width:992px)"; // Large + medium
+$m-lg_md_sm: "(min-width:768px)"; // Large + medium + small
+$m-lg_md_sm_xs: "(min-width:576px)"; // Large + medium + small + extrasmall
+$m-md_sm: "(min-width:768px) and (max-width:1199.5px)"; // Medium + small
+$m-md_sm_xs: "(max-width:1199.5px)"; // Medium + small + extra small
+$m-sm_xs: "(max-width:991.5px)"; // Small + extra small

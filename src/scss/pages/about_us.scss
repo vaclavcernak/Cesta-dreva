@@ -1,0 +1,46 @@
+.about-us-item {
+  margin-bottom: 60px;
+  @media #{$m-xs} {
+    margin-bottom: 30px;
+  }
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+blockquote {
+  position: relative;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 50px;
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 30px 0;
+  border-top: 1px solid #E7E9EC;
+  border-bottom: 1px solid #E7E9EC;
+  @media #{$m-xs} {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 30px auto;
+    padding: 20px 0;
+  }
+  &::before {
+    position: absolute;
+    display: block;
+    content: ' ';
+    background-image: url('../images/blockquote.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    left: -65px;
+    top: 60px;
+    @media (max-width: 992px) {
+      position: static;
+      margin-bottom: 5px;
+    }
+  }
+
+}
