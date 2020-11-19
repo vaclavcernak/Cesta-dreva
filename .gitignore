@@ -27,7 +27,7 @@ composer.lock
 # markup
 /build/
 /assets/
-/production/
+# /production/
 /.temp/
 .sass-cache
 *.map
