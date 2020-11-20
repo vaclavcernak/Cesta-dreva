@@ -47,7 +47,7 @@ module.exports = {
   },
   buildImages: {
     imageExtensions: 'jpg,jpeg,png,svg,gif,ico',
-    isImageMin: false,
+    isImageMin: true,
   },
   error: {
     sound: true,
